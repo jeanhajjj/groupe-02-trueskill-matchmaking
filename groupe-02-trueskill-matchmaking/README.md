@@ -10,9 +10,9 @@
 
 | Nom | GitHub |
 |-----|--------|
-| Prénom NOM 1 | [@github_username_1](https://github.com/github_username_1) |
-| Prénom NOM 2 | [@github_username_2](https://github.com/github_username_2) |
-| Prénom NOM 3 | [@github_username_3](https://github.com/github_username_3) |
+| Jean EL HAJ | [@github_username_1](https://github.com/jeanhajjj) |
+| Theo MELLY | [@github_username_2](https://github.com/TheoMly) |
+| Sacha GIRSZYN | [@github_username_3](https://github.com/sachagirszyn) |
 
 ---
 
