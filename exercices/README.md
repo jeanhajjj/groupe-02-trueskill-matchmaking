@@ -1,3 +1,4 @@
-ajout catégorie exercices 
+Théo, Jean, Sacha
 
-GameTheory 1.1
+Exercices :
+- GameTheory 1.1
