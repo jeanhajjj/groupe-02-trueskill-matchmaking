@@ -92,60 +92,63 @@ L'evaluation se fait par les pairs (etudiants + encadrants) sur 4 criteres notes
 Vous etes libres de choisir l'un des sujets ci-dessous ou de proposer un sujet personnel (a faire valider par les encadrants).
 **Technologie libre** : Python (recommande pour l'ecosysteme ML), C#/.NET, C++, Julia, etc.
 
+**Navigation rapide par categorie** :
+[A - Probas](#categorie-a--ia-probabiliste-et-inference-bayesienne) | [B - GameTheory](#categorie-b--theorie-des-jeux-et-systemes-multi-agents) | [C - ML Finance](#categorie-c--machine-learning-et-finance-quantitative) | [D - Privacy](#categorie-d--confidentialite-et-securite-du-ml) | [E - Deep Learning](#categorie-e--deep-learning-et-architectures-modernes) | [F - LLM Agents](#categorie-f--ia-agents-et-llms-pour-la-finance) | [G - Recherche](#categorie-g--recherche-et-innovation) | [H - QuantConnect](#categorie-h--trading-algorithmique-avec-quantconnect) | [I - Transversaux](#categorie-i--sujets-non-finance-et-transversaux)
+
 | Cat. | # | Sujet | Difficulte | Themes |
 |------|---|-------|-----------|--------|
-| A | A.1 | Recommandation Bayesienne d'Actifs Financiers | 3/5 | Probas |
-| A | A.2 | Allocation sous Incertitude - Processus Gaussiens | 3/5 | Probas, ML |
-| A | A.3 | Prediction de Defaut - Modeles Hierarchiques | 3/5 | Probas |
-| A | A.4 | Volatilite Stochastique (Heston/SABR) avec MCMC | 4/5 | Probas |
-| A | A.5 | Conformal Prediction pour Risk Management | 3/5 | Probas, ML |
-| A | A.6 | Bayesian Neural Networks pour Portefeuille | 3/5 | Probas, ML |
-| A | A.7 | Marketing Mix Modeling Bayesien | 3/5 | Probas |
-| B | B.1 | Auction Design pour Marches Financiers | 3/5 | GameTheory |
-| B | B.2 | Jeux d'Investissement sur Graphes (Network Games) | 3/5 | GameTheory |
-| B | B.3 | Negociation Automatique (CFR) en Finance | 4/5 | GameTheory |
-| B | B.4 | Formation de Coalitions - Trading Cooperatif | 3/5 | GameTheory |
-| B | B.5 | Dynamique Evolutionniste de Strategies de Trading | 3/5 | GameTheory |
-| B | B.6 | Mean Field Games pour Dynamique de Marche | 4/5 | GameTheory, ML |
-| C | C.1 | Classification Documents Financiers Zero-Shot | 3/5 | ML, NLP |
-| C | C.2 | RAG pour Questions Financieres Complexes | 3/5 | ML, NLP |
-| C | C.3 | Detection de Regimes de Marche (VAE-HMM) | 4/5 | ML, Probas |
-| C | C.4 | Classification Risque ESG Multi-label | 3/5 | ML, NLP |
-| C | C.5 | Optimisation de Portefeuille Bayesien (Black-Litterman) | 3/5 | Probas, ML |
-| C | C.6 | Credit Scoring avec IA Explicable (XAI) | 3/5 | ML |
-| C | C.7 | Detection de Fraude en Temps Reel | 3/5 | ML |
-| D | D.1 | Federated Learning pour Credit Collaboratif | 3/5 | ML, Privacy |
-| D | D.2 | Chiffrement Homomorphe (FHE) pour Finance | 4/5 | Crypto, ML |
-| D | D.3 | Detection de Data Poisoning Adversarial | 3/5 | ML, Securite |
-| E | E.1 | Foundation Models pour Series Financieres (Kronos) | 3/5 | ML, Probas |
-| E | E.2 | Transformers pour Limit Order Book (TLOB) | 4/5 | ML |
-| E | E.3 | Diffusion Models pour Donnees Financieres Synthetiques | 4/5 | ML, Probas |
-| E | E.4 | Mamba/SSM pour Prediction Financiere | 3/5 | ML |
-| E | E.5 | GNN pour Construction de Portefeuille | 4/5 | ML, Probas |
-| E | E.6 | PINNs pour Pricing d'Options | 4/5 | Probas, ML |
-| F | F.1 | Multi-Agent LLM Trading (TradingAgents) | 4/5 | GameTheory, ML |
-| F | F.2 | LLM Sentiment Alpha Generation (DK-CoT) | 3/5 | ML, NLP |
-| F | F.3 | FinGPT Fine-Tuning pour Taches Financieres | 3/5 | ML, NLP |
-| F | F.4 | LLMs pour Generation de Scenarios Macro | 3/5 | ML |
-| F | F.5 | Neurosymbolic AI pour Decisions de Credit | 4/5 | ML, SymbolicAI |
-| G | G.1 | Causal ML pour Asset Pricing (EconML/DoWhy) | 3/5 | Probas, ML |
-| G | G.2 | GNN Risque Systemique et Contagion | 4/5 | GameTheory, ML |
-| G | G.3 | RL Market Making et Execution Optimale | 4/5 | GameTheory, ML |
-| G | G.4 | World Models pour Trading (DreamerV3) | 4/5 | GameTheory, ML |
-| G | G.5 | Imitation-RL pour Controle Stochastique (FinFlowRL) | 5/5 | Probas, GT, ML |
-| G | G.6 | GFlowNets pour Generation de Portefeuilles | 4/5 | Probas, ML |
-| H | H.1 | Strategie Alpha ML sur QuantConnect | 3/5 | ML, QC |
-| H | H.2 | Deep RL Trading avec QuantConnect | 4/5 | ML, GT, QC |
-| H | H.3 | Composite AlphaModel Framework | 3/5 | ML, QC |
-| H | H.4 | Regime Switching et Allocation Adaptative | 3/5 | ML, Probas, QC |
-| H | H.5 | Options Strategies Automatisees | 3/5 | ML, QC |
-| H | H.6 | Walk-Forward Analysis et Robustesse | 3/5 | ML, QC |
-| I | I.1 | TrueSkill et Matchmaking Competitif | 3/5 | Probas |
-| I | I.2 | Bayesian Sports Analytics | 3/5 | Probas |
-| I | I.3 | Hanabi AI - Cooperation et Theory of Mind | 4/5 | GameTheory |
-| I | I.4 | Rational Speech Acts (RSA) - Pragmatique du Langage | 3/5 | Probas |
-| I | I.5 | Kidney Exchange - Optimisation Combinatoire Cooperative | 4/5 | GameTheory |
-| I | I.6 | RL pour Controle de Jeux (Snake/Mario/CartPole) | 3/5 | ML |
+| A | A.1 | [Recommandation Bayesienne d'Actifs Financiers](#a1---recommandation-bayesienne-dactifs-financiers) | 3/5 | Probas |
+| A | A.2 | [Allocation sous Incertitude - Processus Gaussiens](#a2---allocation-dactifs-sous-incertitude-avec-processus-gaussiens) | 3/5 | Probas, ML |
+| A | A.3 | [Prediction de Defaut - Modeles Hierarchiques](#a3---prediction-de-defaut-dentreprise-avec-modeles-hierarchiques) | 3/5 | Probas |
+| A | A.4 | [Volatilite Stochastique (Heston/SABR) avec MCMC](#a4---modelisation-de-volatilite-stochastique-hestonsabr-avec-mcmc) | 4/5 | Probas |
+| A | A.5 | [Conformal Prediction pour Risk Management](#a5---conformal-prediction-pour-risk-management) | 3/5 | Probas, ML |
+| A | A.6 | [Bayesian Neural Networks pour Portefeuille](#a6---bayesian-neural-networks-pour-portefeuille) | 3/5 | Probas, ML |
+| A | A.7 | [Marketing Mix Modeling Bayesien](#a7---marketing-mix-modeling-bayesien) | 3/5 | Probas |
+| B | B.1 | [Auction Design pour Marches Financiers](#b1---auction-design-pour-marches-financiers) | 3/5 | GameTheory |
+| B | B.2 | [Jeux d'Investissement sur Graphes (Network Games)](#b2---jeux-dinvestissement-sur-graphes-network-games) | 3/5 | GameTheory |
+| B | B.3 | [Negociation Automatique (CFR) en Finance](#b3---negociation-automatique-cfr-en-finance) | 4/5 | GameTheory |
+| B | B.4 | [Formation de Coalitions - Trading Cooperatif](#b4---formation-de-coalitions-pour-plateformes-de-trading) | 3/5 | GameTheory |
+| B | B.5 | [Dynamique Evolutionniste de Strategies de Trading](#b5---dynamique-evolutionniste-de-strategies-de-trading) | 3/5 | GameTheory |
+| B | B.6 | [Mean Field Games pour Dynamique de Marche](#b6---mean-field-games-pour-dynamique-de-marche) | 4/5 | GameTheory, ML |
+| C | C.1 | [Classification Documents Financiers Zero-Shot](#c1---classification-de-documents-financiers-avec-zero-shot-learning) | 3/5 | ML, NLP |
+| C | C.2 | [RAG pour Questions Financieres Complexes](#c2---rag-pour-questions-financieres-complexes) | 3/5 | ML, NLP |
+| C | C.3 | [Detection de Regimes de Marche (VAE-HMM)](#c3---detection-de-regimes-de-marche-vae-hmm) | 4/5 | ML, Probas |
+| C | C.4 | [Classification Risque ESG Multi-label](#c4---classification-risque-esg-multi-label) | 3/5 | ML, NLP |
+| C | C.5 | [Optimisation de Portefeuille Bayesien (Black-Litterman)](#c5---optimisation-de-portefeuille-bayesien-black-litterman) | 3/5 | Probas, ML |
+| C | C.6 | [Credit Scoring avec IA Explicable (XAI)](#c6---credit-scoring-avec-ia-explicable-xai) | 3/5 | ML |
+| C | C.7 | [Detection de Fraude en Temps Reel](#c7---detection-de-fraude-en-temps-reel) | 3/5 | ML |
+| D | D.1 | [Federated Learning pour Credit Collaboratif](#d1---federated-learning-pour-prediction-de-defaut-collaborative) | 3/5 | ML, Privacy |
+| D | D.2 | [Chiffrement Homomorphe (FHE) pour Finance](#d2---chiffrement-homomorphe-fhe-pour-agregation-de-donnees-financieres) | 4/5 | Crypto, ML |
+| D | D.3 | [Detection de Data Poisoning Adversarial](#d3---detection-de-data-poisoning-adversarial) | 3/5 | ML, Securite |
+| E | E.1 | [Foundation Models pour Series Financieres (Kronos)](#e1---foundation-models-pour-series-financieres-kronos) | 3/5 | ML, Probas |
+| E | E.2 | [Transformers pour Limit Order Book (TLOB)](#e2---transformers-pour-limit-order-book-tlob) | 4/5 | ML |
+| E | E.3 | [Diffusion Models pour Donnees Financieres Synthetiques](#e3---diffusion-models-pour-donnees-financieres-synthetiques) | 4/5 | ML, Probas |
+| E | E.4 | [Mamba/SSM pour Prediction Financiere](#e4---mambassm-pour-prediction-financiere) | 3/5 | ML |
+| E | E.5 | [GNN pour Construction de Portefeuille](#e5---gnn-pour-construction-de-portefeuille) | 4/5 | ML, Probas |
+| E | E.6 | [PINNs pour Pricing d'Options](#e6---pinns-pour-pricing-doptions) | 4/5 | Probas, ML |
+| F | F.1 | [Multi-Agent LLM Trading (TradingAgents)](#f1---multi-agent-llm-trading-tradingagents) | 4/5 | GameTheory, ML |
+| F | F.2 | [LLM Sentiment Alpha Generation (DK-CoT)](#f2---llm-sentiment-alpha-generation-dk-cot) | 3/5 | ML, NLP |
+| F | F.3 | [FinGPT Fine-Tuning pour Taches Financieres](#f3---fingpt-fine-tuning-pour-taches-financieres) | 3/5 | ML, NLP |
+| F | F.4 | [LLMs pour Generation de Scenarios Macro](#f4---llms-pour-generation-de-scenarios-macroeconomiques) | 3/5 | ML |
+| F | F.5 | [Neurosymbolic AI pour Decisions de Credit](#f5---neurosymbolic-ai-pour-decisions-de-credit) | 4/5 | ML, SymbolicAI |
+| G | G.1 | [Causal ML pour Asset Pricing (EconML/DoWhy)](#g1---causal-ml-pour-asset-pricing-econmldowhy) | 3/5 | Probas, ML |
+| G | G.2 | [GNN Risque Systemique et Contagion](#g2---gnn-risque-systemique-et-contagion-financiere) | 4/5 | GameTheory, ML |
+| G | G.3 | [RL Market Making et Execution Optimale](#g3---rl-market-making-et-execution-optimale) | 4/5 | GameTheory, ML |
+| G | G.4 | [World Models pour Trading (DreamerV3)](#g4---world-models-pour-trading-dreamerv3) | 4/5 | GameTheory, ML |
+| G | G.5 | [Imitation-RL pour Controle Stochastique (FinFlowRL)](#g5---imitation-rl-pour-controle-stochastique-en-finance-finflowrl) | 5/5 | Probas, GT, ML |
+| G | G.6 | [GFlowNets pour Generation de Portefeuilles](#g6---gflownets-pour-generation-de-portefeuilles) | 4/5 | Probas, ML |
+| H | H.1 | [Strategie Alpha ML sur QuantConnect](#h1---strategie-alpha-ml-sur-quantconnect) | 3/5 | ML, QC |
+| H | H.2 | [Deep RL Trading avec QuantConnect](#h2---deep-rl-trading-avec-quantconnect) | 4/5 | ML, GT, QC |
+| H | H.3 | [Composite AlphaModel Framework](#h3---composite-alphamodel-framework) | 3/5 | ML, QC |
+| H | H.4 | [Regime Switching et Allocation Adaptative](#h4---regime-switching-et-allocation-adaptative) | 3/5 | ML, Probas, QC |
+| H | H.5 | [Options Strategies Automatisees](#h5---options-strategies-automatisees-wheelcovered-call) | 3/5 | ML, QC |
+| H | H.6 | [Walk-Forward Analysis et Robustesse](#h6---walk-forward-analysis-et-robustesse-de-strategies) | 3/5 | ML, QC |
+| I | I.1 | [TrueSkill et Matchmaking Competitif](#i1---trueskill-et-matchmaking-competitif) | 3/5 | Probas |
+| I | I.2 | [Bayesian Sports Analytics](#i2---bayesian-sports-analytics) | 3/5 | Probas |
+| I | I.3 | [Hanabi AI - Cooperation et Theory of Mind](#i3---hanabi-ai---cooperation-et-theory-of-mind) | 4/5 | GameTheory |
+| I | I.4 | [Rational Speech Acts (RSA) - Pragmatique du Langage](#i4---rational-speech-acts-rsa---pragmatique-du-langage) | 3/5 | Probas |
+| I | I.5 | [Kidney Exchange - Optimisation Combinatoire Cooperative](#i5---kidney-exchange---optimisation-combinatoire-cooperative) | 4/5 | GameTheory |
+| I | I.6 | [RL pour Controle de Jeux (Snake/Mario/CartPole)](#i6---rl-pour-controle-de-jeux-snakemariocartpole) | 3/5 | ML |
 
 ---
 
@@ -349,6 +352,8 @@ Un sujet tres demande en entreprise : optimiser le budget publicitaire. Le Marke
 - [Google LightweightMMM](https://github.com/google/lightweight_mmm) - Implementation Google (pour comparaison)
 - [Bayesian Methods for Media Mix Modeling (Jin et al.)](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/46001.pdf) - Paper de reference
 
+[Retour a l'index des sujets](#index-des-sujets)
+
 ---
 
 ## Categorie B : Theorie des Jeux et Systemes Multi-Agents
@@ -515,6 +520,8 @@ Comment modeliser l'interaction strategique d'une foule immense de traders sur u
 - [Tutoriel MFG (GitHub)](https://github.com/Nathan-Sanglier/M2MO-Mean-Field-Games) - Implementation pedagogique
 - [Neural ODE (Chen et al., NeurIPS 2018)](https://arxiv.org/abs/1806.07366) - Architecture de base
 
+[Retour a l'index des sujets](#index-des-sujets)
+
 ---
 
 ## Categorie C : Machine Learning et Finance Quantitative
@@ -652,7 +659,7 @@ Au-dela de la theorie de Markowitz classique, utiliser le modele Black-Litterman
 - [PyPortfolioOpt - Black-Litterman](https://pyportfolioopt.readthedocs.io/en/latest/BlackLitterman.html) - Implementation directe en Python (point de depart recommande)
 - [Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) - Optimisation avancee avec Black-Litterman
 - [Black-Litterman Model (Wikipedia)](https://en.wikipedia.org/wiki/Black%E2%80%93Litterman_model) - Reference theorique
-- [Thomas Starke - BL Model Tutorial](https://www.quantconnect.com/tutorials/introduction-to-financial-python/black-litterman-portfolio-optimization) - Tutoriel QuantConnect
+- [Thomas Starke - BL Model (QuantConnect Learning)](https://www.quantconnect.com/learning/introduction-to-financial-python) - Tutoriels financiers Python
 
 ---
 
@@ -708,6 +715,8 @@ La detection de fraude est un probleme de classification fortement desequilibre 
 - [PyOD Fraud Detection Example](https://pyod.readthedocs.io/en/latest/example.html) - Tutoriel
 - [PyTorch Geometric](https://pyg.org/) - GNN pour graphes de transactions (niveau Excellent)
 - [imbalanced-learn (SMOTE)](https://imbalanced-learn.org/) - Gestion du desequilibre de classes
+
+[Retour a l'index des sujets](#index-des-sujets)
 
 ---
 
@@ -798,6 +807,8 @@ Systeme detectant les tentatives de data poisoning dans des modeles ML financier
 - [ART Poisoning Tutorial](https://github.com/Trusted-AI/adversarial-robustness-toolbox/blob/main/notebooks/poisoning_attack_svm.ipynb) - Tutoriel data poisoning
 - [SecML](https://secml.readthedocs.io/) - Security evaluation pour ML
 - [Backdoor Attacks Survey (Li et al., 2022)](https://arxiv.org/abs/2007.08745) - Vue d'ensemble des attaques
+
+[Retour a l'index des sujets](#index-des-sujets)
 
 ---
 
@@ -975,6 +986,8 @@ Resoudre l'equation aux derivees partielles (EDP) de Black-Scholes (et extension
 - [PINNs GitHub (MATLAB)](https://github.com/matlab-deep-learning/PINNsOptionPricing) - Implementation MATLAB
 - [PyTorch PINN Tutorial](https://benmoseley.blog/my-research/so-what-is-a-physics-informed-neural-network/) - Introduction pedagogique
 
+[Retour a l'index des sujets](#index-des-sujets)
+
 ---
 
 ## Categorie F : IA Agents et LLMs pour la Finance
@@ -1115,6 +1128,8 @@ Systeme hybride neurosymbolique combinant un reseau de neurones (pour la predict
 - [DeepProbLog](https://github.com/ML-KULeuven/deepproblog) - Programmation logique probabiliste + deep learning
 - [NeurASP](https://github.com/azreasoners/NeurASP) - Neuro-symbolic Answer Set Programming
 - [SHAP](https://github.com/slundberg/shap) - Pour comparaison XAI classique
+
+[Retour a l'index des sujets](#index-des-sujets)
 
 ---
 
@@ -1285,6 +1300,8 @@ Les GFlowNets (Generative Flow Networks, Yoshua Bengio) sont une nouvelle famill
 - [TorchGFN Library](https://github.com/GFNOrg/torchgfn) - Implementation PyTorch
 - [GFlowNet Foundations (Bengio et al., 2023)](https://arxiv.org/abs/2111.09266) - Paper fondateur
 
+[Retour a l'index des sujets](#index-des-sujets)
+
 ---
 
 ## Categorie H : Trading Algorithmique avec QuantConnect
@@ -1373,7 +1390,7 @@ Construire un framework de strategies composites utilisant l'architecture AlphaM
 | QC-Py-15 | Optimisation de Parametres | [QC-Py-15](https://github.com/jsboige/CoursIA/blob/main/MyIA.AI.Notebooks/QuantConnect/Python/QC-Py-15-Parameter-Optimization.ipynb) |
 
 **References externes** :
-- [QuantConnect Alpha Streams](https://www.quantconnect.com/docs/v2/cloud-platform/alpha-streams) - Documentation Alpha
+- [QuantConnect Alpha Framework](https://www.quantconnect.com/docs/v2/writing-algorithms/algorithm-framework/alpha/key-concepts) - Documentation Alpha Models
 - [LEAN Engine](https://github.com/QuantConnect/Lean) - Architecture framework
 
 ---
@@ -1400,7 +1417,7 @@ Construire une strategie qui detecte automatiquement les regimes de marche (bull
 
 **References externes** :
 - [hmmlearn](https://hmmlearn.readthedocs.io/) - HMM en Python
-- [QuantConnect Risk Management](https://www.quantconnect.com/docs/v2/writing-algorithms/trading-and-orders/risk-management) - Documentation
+- [QuantConnect Risk Management](https://www.quantconnect.com/docs/v2/writing-algorithms/algorithm-framework/risk-management/key-concepts) - Documentation Risk Management
 
 ---
 
@@ -1426,7 +1443,7 @@ Automatiser des strategies d'options classiques (Wheel Strategy, Covered Call, I
 
 **References externes** :
 - [QuantConnect Options Documentation](https://www.quantconnect.com/docs/v2/writing-algorithms/securities/asset-classes/equity-options) - Reference officielle
-- [The Wheel Strategy (Investopedia)](https://www.investopedia.com/terms/w/wheelstrategy.asp) - Explication
+- [The Wheel Strategy (Investopedia)](https://www.investopedia.com/the-wheel-options-trading-strategy-7494445) - Explication detaillee
 
 ---
 
@@ -1454,6 +1471,8 @@ Construire un framework de validation robuste pour strategies de trading : walk-
 - [Advances in Financial ML (Lopez de Prado, 2018)](https://www.wiley.com/en-us/Advances+in+Financial+Machine+Learning-p-9781119482086) - Reference sur la robustesse
 - [Deflated Sharpe Ratio](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2460551) - Correction statistique
 - [QuantConnect Optimization](https://www.quantconnect.com/docs/v2/cloud-platform/optimization) - Documentation
+
+[Retour a l'index des sujets](#index-des-sujets)
 
 ---
 
@@ -1622,6 +1641,8 @@ Apprendre a un agent RL a jouer a un jeu video (Snake, Mario, Doom) ou a control
 - [RL Baselines Zoo](https://github.com/DLR-RM/rl-baselines3-zoo) - Hyperparametres optimises pour 100+ envs
 - [Spinning Up (OpenAI)](https://spinningup.openai.com/) - Cours d'introduction au RL (theorie + code)
 - [CleanRL](https://github.com/vwxyzjn/cleanrl) - Implementations single-file de PPO, DQN, SAC (pedagogique)
+
+[Retour a l'index des sujets](#index-des-sujets)
 
 ---
 
