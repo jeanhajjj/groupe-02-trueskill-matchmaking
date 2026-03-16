@@ -262,7 +262,7 @@ def niveau_excellent(joueurs, joueurs_classes):
 
     random.seed(GRAINE)
     joueurs_dyn = creer_joueurs(nb_joueurs=NB_JOUEURS, mu_min=10, mu_max=50)
-    hist_dyn, info_saisons = simuler_saisons(
+    hist_dyn, info_saisons, _ = simuler_saisons(
         joueurs_dyn,
         nb_saisons=NB_SAISONS,
         matchs_par_saison=MATCHS_SAISON,

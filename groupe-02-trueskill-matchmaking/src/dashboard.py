@@ -196,7 +196,7 @@ def lancer_simulation(nb_joueurs, nb_matchs, graine,
     # ── Niveau Excellent : saisons ──────────────────────────────────────────
     random.seed(graine)
     joueurs_dyn = creer_joueurs(nb_joueurs=nb_joueurs, mu_min=10, mu_max=50)
-    hist_dyn, info_saisons = simuler_saisons(
+    hist_dyn, info_saisons, breakpoints_saisons = simuler_saisons(
         joueurs_dyn,
         nb_saisons=nb_saisons,
         matchs_par_saison=matchs_par_saison,
@@ -225,8 +225,9 @@ def lancer_simulation(nb_joueurs, nb_matchs, graine,
         'hist_eq':     hist_eq,
         'stats_eq':    stats_eq,
         # Saisons
-        'joueurs_dyn': joueurs_dyn,
-        'info_saisons': info_saisons,
+        'joueurs_dyn':       joueurs_dyn,
+        'info_saisons':      info_saisons,
+        'breakpoints_saisons': breakpoints_saisons,
         # TrueSkill 2
         'classes_ts2':  classes_ts2,
         'comp_ts':      comparaison_ts,
@@ -416,12 +417,7 @@ with tab1:
             'Erreur |µ-vrai|': round(erreur, 2),
         })
     df_class = pd.DataFrame(rows)
-    st.dataframe(
-        df_class.style
-            .background_gradient(subset=['µ (estimé)'], cmap='Blues')
-            .background_gradient(subset=['Erreur |µ-vrai|'], cmap='Reds_r'),
-        use_container_width=True, hide_index=True
-    )
+    st.dataframe(df_class, use_container_width=True, hide_index=True)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -497,7 +493,7 @@ with tab2:
         'ecart': 'Écart de rang',
     })
     st.dataframe(
-        df_comp_display.style.background_gradient(subset=['Écart de rang'], cmap='Oranges'),
+        df_comp_display,
         use_container_width=True, hide_index=True
     )
 
@@ -590,8 +586,10 @@ with tab3:
         "Les compétences cachées évoluent légèrement entre les saisons."
     )
 
-    joueurs_dyn  = data['joueurs_dyn']
-    info_saisons = data['info_saisons']
+    joueurs_dyn          = data['joueurs_dyn']
+    info_saisons         = data['info_saisons']
+    # breakpoints[s] = indice réel dans l'historique individuel où la saison s finit
+    breakpoints          = data['breakpoints_saisons']
 
     # Graphe σ avec marqueurs de saison
     fig_dyn_sigma = go.Figure()
@@ -603,20 +601,18 @@ with tab3:
             line=dict(color=couleur(i), width=1.8),
         ))
 
-    # Ajouter des lignes verticales pour les inter-saisons
-    total_matchs_par_saison = matchs_par_saison + 1  # +1 pour le point initial
-    for s in range(1, nb_saisons):
-        idx_inter = s * total_matchs_par_saison
+    # Lignes verticales aux vraies positions inter-saison (sauf après la dernière saison)
+    for s_idx, bp in enumerate(breakpoints[:-1]):
         fig_dyn_sigma.add_vline(
-            x=idx_inter,
-            line=dict(color='rgba(255,200,0,0.5)', dash='dash', width=2),
-            annotation_text=f"Inter-saison {s}→{s+1}",
+            x=bp,
+            line=dict(color='rgba(255,200,0,0.6)', dash='dash', width=2),
+            annotation_text=f"Inter-saison {s_idx+1}→{s_idx+2}",
             annotation_position="top",
         )
 
     fig_dyn_sigma.update_layout(
-        title="Évolution de σ sur plusieurs saisons (les sauts = decay inter-saison)",
-        xaxis_title="Matchs cumulés (toutes saisons)",
+        title="Évolution de σ par joueur (sauts jaunes = decay inter-saison)",
+        xaxis_title="Matchs joués par ce joueur (toutes saisons)",
         yaxis_title="σ (incertitude)",
         height=400, template='plotly_dark',
         legend=dict(orientation='h', yanchor='bottom', y=1.02, font=dict(size=9)),
@@ -627,8 +623,9 @@ with tab3:
     # Graphe µ sur les saisons
     fig_dyn_mu = go.Figure()
     for i, j in enumerate(joueurs_dyn):
+        x_range = list(range(len(j['historique_mu'])))
         fig_dyn_mu.add_trace(go.Scatter(
-            x=list(range(len(j['historique_mu']))),
+            x=x_range,
             y=j['historique_mu'],
             mode='lines', name=j['nom'],
             line=dict(color=couleur(i), width=1.8),
@@ -640,10 +637,12 @@ with tab3:
             line=dict(color=couleur(i), dash='dot', width=1),
             showlegend=False,
         ))
-    for s in range(1, nb_saisons):
+    for s_idx, bp in enumerate(breakpoints[:-1]):
         fig_dyn_mu.add_vline(
-            x=s * total_matchs_par_saison,
+            x=bp,
             line=dict(color='rgba(255,200,0,0.4)', dash='dash', width=2),
+            annotation_text=f"S{s_idx+1}→S{s_idx+2}",
+            annotation_position="top right",
         )
 
     fig_dyn_mu.update_layout(
@@ -767,13 +766,7 @@ with tab3:
         'taux_victoire': '% Victoires',
         'competence_reelle': 'Vrai niveau',
     })
-    st.dataframe(
-        df_ts2.style
-            .background_gradient(subset=['Score TS2'], cmap='Purples')
-            .background_gradient(subset=['Consistance'], cmap='Greens')
-            .background_gradient(subset=['Activité'], cmap='Oranges'),
-        use_container_width=True, hide_index=True
-    )
+    st.dataframe(df_ts2, use_container_width=True, hide_index=True)
 
     # Explication pédagogique
     st.markdown("""

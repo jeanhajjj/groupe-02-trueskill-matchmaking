@@ -120,6 +120,9 @@ def simuler_saisons(joueurs, nb_saisons=3, matchs_par_saison=70,
 
     historique_global = []
     info_saisons      = []
+    # breakpoints[i] = indice dans l'historique individuel où la saison i se termine
+    # (utilisé par le dashboard pour placer les lignes verticales inter-saison)
+    breakpoints       = []
 
     for num_saison in range(1, nb_saisons + 1):
         print(f"  [Saison {num_saison}/{nb_saisons}] Simulation de {matchs_par_saison} matchs...")
@@ -140,6 +143,11 @@ def simuler_saisons(joueurs, nb_saisons=3, matchs_par_saison=70,
             })
 
         historique_global.extend(historique_saison)
+
+        # ── Enregistrer la longueur réelle de l'historique joueur à ce stade ──
+        # On prend le 1er joueur comme référence (tous ont le même nombre de points)
+        # len - 1 car on veut l'index du dernier point de la saison
+        breakpoints.append(len(joueurs[0]['historique_mu']) - 1)
 
         # ── Snapshot de fin de saison (état des ratings) ──────────────────────
         snapshot = {
@@ -167,7 +175,7 @@ def simuler_saisons(joueurs, nb_saisons=3, matchs_par_saison=70,
             if evolution_competence:
                 appliquer_evolution_competence(joueurs, amplitude=2.0)
 
-    return historique_global, info_saisons
+    return historique_global, info_saisons, breakpoints
 
 
 # =============================================================================
